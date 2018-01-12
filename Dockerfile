@@ -4,7 +4,6 @@ COPY squid.conf /squid/
 COPY credentials /squid/
 EXPOSE 3128
 
-RUN apk update \
-&& apk add squid 
+RUN apk update && apk add squid 
 
 CMD ["squid", "-f", "/squid/squid.conf", "-N"]
